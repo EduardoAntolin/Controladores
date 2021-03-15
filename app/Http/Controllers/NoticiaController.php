@@ -9,6 +9,7 @@ class NoticiaController extends Controller
 {
     public function lista(){
         $noticias = Noticia::all();
+        
 
         $argumentos = array();
         $argumentos["noticias"] = $noticias;
@@ -17,13 +18,13 @@ class NoticiaController extends Controller
     }
 
     public function detalles($id) {
+        //sistema dew simulacion de detalles de noticia
         $noticia = Noticia::find($id);
         
 
         $argumentos = array();
         $argumentos["noticia"] = $noticia;
 
-
-        return view('noticias.detalles', $argumentos); 
+        return view('noticias.detalles', $argumentos);
     }
 }
